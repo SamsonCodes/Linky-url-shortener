@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  color: green;
+}
+
+h1 {
+  color: white;
+}
+
+.explanation {
+  color: yellow;
+}
+
+.mapping {
+  display: flex;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.messageBox {
+  color: yellow;
+}

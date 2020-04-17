@@ -1,0 +1,34 @@
+<%- include("header") -%>
+
+<h1>URL Shorter</h1>
+<div class="explanation">
+  <h3>How it works:</h3>
+  <p>
+    Simply add your own url mappings to the list using the form below.
+    Now you can navigate to the destination url by simply adding the short url path behind
+    the url of this website! <br><br>
+
+    You can also delete mappings by clicking on the checkbox in front of it.
+    </p>
+</div>
+
+  <% mappings.forEach(function(mapping){ %>
+    <form action="/delete" method="post">
+      <div class="mapping">
+        <input type="checkbox" name="checkbox" value="<%=mapping._id%>" onChange="this.form.submit()">
+        <p><%=mapping.shortUrl%> => <%=mapping.destinationUrl%> </p>
+      </div>
+    </form>
+  <% }); %>
+<form class="" action="/" method="post">
+  <label for="">Short</label>
+  <input type="text" name="shortUrl" value="">
+  <label for="">Destination</label>
+  <input type="text" name="destinationUrl" value="">
+  <button type="submit" name="button">Save</button>
+</form>
+<div class="messageBox">
+  <p><%= message %></p>
+</div>
+
+<%- include("footer") -%>
