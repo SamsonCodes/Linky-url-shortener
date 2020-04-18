@@ -1,14 +1,30 @@
 body {
-  background-color: black;
-  color: green;
+  background: black;
 }
 
 h1 {
+}
+
+.heading{
   color: white;
+  background: black;
+  padding: 10px;
 }
 
 .explanation {
-  color: yellow;
+  color: black;
+  background: grey;
+  padding: 10px;
+}
+
+.link-panel {
+  color: black;
+  background: grey;
+}
+
+.panel-heading{
+  margin-top: 0px;
+  margin-left: 20px;
 }
 
 .mapping {
@@ -19,13 +35,31 @@ input[type="checkbox"] {
   margin: 20px;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.submit-form {
+  display: block;
+  width:70px;
+  margin: 20px;
+}
+
+.submit-form button{
+  margin-top: 10px;
+  color: white;
+  background-color: black;
+  border-color: black;
 }
 
 .messageBox {
-  color: yellow;
+  color: white;
+  background: black;
+  padding: 10px;
+  font-weight: 1000;
+  border-style: solid;
+  border-color: white;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: grey;
 }

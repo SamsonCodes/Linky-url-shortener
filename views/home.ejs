@@ -1,6 +1,9 @@
 <%- include("header") -%>
 
-<h1>URL Shorter</h1>
+<div class="heading">
+  <h1>Linky | Url Management</h1>
+</div>
+
 <div class="explanation">
   <h3>How it works:</h3>
   <p>
@@ -10,8 +13,10 @@
 
     You can also delete mappings by clicking on the checkbox in front of it.
     </p>
+    <hr>
 </div>
-
+<div class="link-panel">
+  <h3 class="panel-heading">Url Mappings</h3>
   <% mappings.forEach(function(mapping){ %>
     <form action="/delete" method="post">
       <div class="mapping">
@@ -20,13 +25,21 @@
       </div>
     </form>
   <% }); %>
-<form class="" action="/" method="post">
-  <label for="">Short</label>
-  <input type="text" name="shortUrl" value="">
-  <label for="">Destination</label>
-  <input type="text" name="destinationUrl" value="">
+<hr>
+<form class="submit-form" action="/" method="post">
+  <div class="field">
+    <label for="">Short</label>
+    <input type="text" name="shortUrl" value="">
+  </div>
+  <div class="field">
+    <label for="">Destination</label>
+    <input type="text" name="destinationUrl" value="">
+  </div>  
   <button type="submit" name="button">Save</button>
 </form>
+<hr>
+</div>
+
 <div class="messageBox">
   <p><%= message %></p>
 </div>
