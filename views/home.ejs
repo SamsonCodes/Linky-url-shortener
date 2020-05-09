@@ -1,47 +1,54 @@
 <%- include("header") -%>
 
-<div class="heading">
-  <h1>Linky | Url Management</h1>
-</div>
+<nav class="heading navbar navbar-expand-lg heading">
+  <a class="navbar-brand" href="/">Linky | Url Management</a>
+</nav>
 
-<div class="explanation">
-  <h3>How it works:</h3>
-  <p>
-    Simply add your own url mappings to the list using the form below.
-    Now you can navigate to the destination url by simply adding the short url path behind
-    the url of this website! <br><br>
+<div class="main-body">
 
-    You can also delete mappings by clicking on the checkbox in front of it.
-    </p>
-    <hr>
-</div>
-<div class="link-panel">
-  <h3 class="panel-heading">Url Mappings</h3>
-  <% mappings.forEach(function(mapping){ %>
-    <form action="/delete" method="post">
-      <div class="mapping">
-        <input type="checkbox" name="checkbox" value="<%=mapping._id%>" onChange="this.form.submit()">
-        <p><%=mapping.shortUrl%> => <%=mapping.destinationUrl%> </p>
-      </div>
-    </form>
-  <% }); %>
-<hr>
-<form class="submit-form" action="/" method="post">
-  <div class="field">
-    <label for="">Short</label>
-    <input type="text" name="shortUrl" value="">
+
+  <div class="ui-wrapper">
+    <div class="explanation">
+      <h3 class="explanation-heading">How it works:</h3>
+      <p>
+        Simply add your own url mappings to the list using the form below.
+        Now you can navigate to the destination url by simply adding the short url path behind
+        the url of this website! <br><br>
+
+        You can also delete mappings by clicking on the checkbox in front of it.
+        </p>
+    </div>
+    <!-- <h3 class="panel-heading">Url Mappings</h3> -->
+    <div class="link-panel">
+      <% mappings.forEach(function(mapping){ %>
+        <form action="/delete" method="post">
+          <div class="mapping form-group form-check">
+            <input class="form-check-input" type="checkbox" name="checkbox" value="<%=mapping._id%>" onChange="this.form.submit()">
+            <p><%=mapping.shortUrl%> => <%=mapping.destinationUrl%> </p>
+          </div>
+        </form>
+      <% }); %>
+    </div>
+
+    <!-- <h3 class="panel-heading">Mapping Form</h3> -->
+    <div class="submit-form">
+      <form action="/" method="post">
+        <div class="field form-group">
+          <label for="">Short</label>
+          <input class="form-control" type="text" name="shortUrl" value="">
+        </div>
+        <div class="field form-group">
+          <label for="">Destination</label>
+          <input class="form-control" type="text" name="destinationUrl" value="">
+        </div>
+        <button class="save-button btn" type="submit" name="button">Save</button>
+      </form>
+    </div>
+
+    <div class="messageBox">
+      <p><%= message %></p>
+    </div>
   </div>
-  <div class="field">
-    <label for="">Destination</label>
-    <input type="text" name="destinationUrl" value="">
-  </div>  
-  <button type="submit" name="button">Save</button>
-</form>
-<hr>
-</div>
-
-<div class="messageBox">
-  <p><%= message %></p>
 </div>
 
 <%- include("footer") -%>

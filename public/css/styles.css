@@ -1,65 +1,76 @@
 body {
-  background: black;
+  background-color: #dae1e7;
+  text-align: center;
 }
 
-h1 {
+.main-body {
+  background-color: #00909e;
 }
 
 .heading{
-  color: white;
-  background: black;
+  color: #dae1e7;
+  background-color: #142850;
   padding: 10px;
+}
+
+.heading a{
+  color: #dae1e7;
+  font-size: 3rem;
+  margin: auto;
 }
 
 .explanation {
-  color: black;
-  background: grey;
+  color: #27496d;
+  background-color: #dae1e7;
   padding: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.explanation-heading {
+  color: #142850;
+}
+
+.ui-wrapper {
+  background-color: #dae1e7;
+  padding: 10px;
+  max-width: 500px;
+  margin: auto;
 }
 
 .link-panel {
-  color: black;
-  background: grey;
+  color: #dae1e7;
+  background-color: #27496d;
+  padding: 10px;
+  text-align: left;
 }
 
 .panel-heading{
   margin-top: 0px;
-  margin-left: 20px;
-}
-
-.mapping {
-  display: flex;
-}
-
-input[type="checkbox"] {
-  margin: 20px;
 }
 
 .submit-form {
-  display: block;
-  width:70px;
-  margin: 20px;
+  color: #27496d;
+  background-color: #dae1e7;
+  padding: 10px;
 }
 
-.submit-form button{
-  margin-top: 10px;
-  color: white;
-  background-color: black;
-  border-color: black;
+.save-button {
+  color: #dae1e7;
+  background-color: #27496d;
+  text-align: left;
 }
 
 .messageBox {
-  color: white;
-  background: black;
+  color: #dae1e7;
+  background-color: #27496d;
   padding: 10px;
-  font-weight: 1000;
-  border-style: solid;
-  border-color: white;
+  max-width: 500px;
+  margin: auto;
 }
 
 footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: grey;
+  color: #27496d;
+  background-color: #142850;
+  padding: 10px;
 }
