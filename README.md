@@ -1,5 +1,5 @@
-# Linky-url-shorter
-A simple url shorter application using Express.
+# Linky-url-shortener
+A simple url shortener application using Express.
 
 What does that mean? 
 
